@@ -9,10 +9,6 @@ import EmployeesAddForm from "../employees-add-form/employees-add-form";
 import "./app.css";
 
 function App() {
-  // const [filter, setFilter] = useState({
-  //   term: "",
-  //   filter: "all",
-  // });
   const [term, setTerm] = useState("");
   const [filter, setFilter] = useState("all");
   const [data, setData] = useState([
@@ -50,9 +46,7 @@ function App() {
     if (!term) {
       return data;
     }
-
-    console.log(data.filter((p) => p.name.includes(term)));
-    return data.filter((p) => p.name.includes(term));
+    return data.filter((p) => p.name.toLowerCase().includes(term.toLowerCase()));
   }
 
   function filterFilterEmployees(data) {

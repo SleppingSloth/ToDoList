@@ -3,7 +3,6 @@ import EmployeesListItem from "../employees-list-item/employees-list-item";
 import "./employees-list.css";
 
 const EmployeesList = ({ data, deleteEmployees, addIncrease, addRise }) => {
-  console.log(data);
   const postList = data.map((item) => {
     const { id, ...dataItem } = item;
     return (
